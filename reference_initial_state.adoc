@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: reference_initial_state.html 
+keywords: install, installing, initial state, cluster initial state 
+summary: クラスタを導入し、環境に応じてクラスタを設定したら、クラスタの初期状態に注意する必要があります。 
+---
+= 導入後のクラスタの初期状態
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+クラスタを導入し、環境に応じてクラスタを設定したら、クラスタの初期状態に注意する必要があります。
+
+ONTAP Select クラスタには、作成後にいくつかの特性があります。
+
+
+NOTE: ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、技術情報の記事を参照してlink:https://kb.netapp.com/onprem/ontap/ONTAP_Select/OTS_Deploy_cluster_refresh_fails_with_error%3A_ONTAPSelectSysCLIVersionFailed_zapi_returned_bad_status_0%3A_None["OTS Deployクラスタの更新がエラーで失敗する"^]ください。
+
+.LIF
+ユーザが指定する 2 種類の LIF が割り当てられます。
+
+* クラスタ管理（クラスタごとに 1 つ）
+* ノード管理（ノードごとに 1 つ）
+
+
+.SVM
+2 つの管理 SVM がアクティブです。
+
+* デフォルトSVM
+* クラスタSVM
+
+
+.アグリゲート
+ルートアグリゲートが作成されます。
+
+.特徴
+すべての機能のライセンスが付与され、使用可能です。SnapLock と FabricPool のどちらにも、個別のライセンスが必要です。
+
+
+NOTE: データ SVM は作成されません。また、マルチノードクラスタの内部ネットワークでは LIF が自動生成されます。
+
+.関連情報
+* link:reference_lic_ontap_features.html["ONTAP 機能はデフォルトで有効になっています"]
+
