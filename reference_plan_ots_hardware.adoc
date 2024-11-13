@@ -42,6 +42,7 @@ ONTAP Select は次のハイパーバイザーに導入できます。
 * VMware ESXi 7.0 GA（ビルド15849807以降）：7.0 U1、U2、U3Cを含む
 * VMware ESXi 8.0 GA（ビルド20513097）
 * VMware ESXi 8.0 U1（ビルド21495797）
+* VMware ESXi 8.0 U3（ONTAP 9 .15.1P4以降のパッチリリースで使用可能）
 
 
 
