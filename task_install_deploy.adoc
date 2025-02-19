@@ -22,6 +22,9 @@ ONTAP Select Deploy 管理ユーティリティをインストールし、ユー
 
 ONTAP Select パッケージは、NetApp Support Siteからダウンロードできます。
 
+.開始する前に
+https://mysupport.netapp.com/site/user/registration["NetAppサポートサイトの登録アカウントが必要です"^]です。
+
 .タスクの内容
 ONTAP Select Deploy管理ユーティリティは、Open Virtualization Format（OVF）標準に基づく仮想マシン（VM）としてパッケージ化されています。単一の圧縮ファイルには、というサフィックスが付き `ova`ます。VMは、ONTAP SelectノードのDeployサーバとインストールイメージを提供します。
 

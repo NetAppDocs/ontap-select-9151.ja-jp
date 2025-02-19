@@ -16,6 +16,15 @@ summary: 購入を決定する前に ONTAP Select を評価したい場合は、
 [role="lead"]
 購入を決定する前に ONTAP Select を評価したい場合は、評価用ライセンスを使用できます。評価用ライセンスは ONTAP Select Deploy 管理ユーティリティに含まれており、評価用導入の一環として各 ONTAP Select ノードに自動的に適用されます。
 
+[NOTE]
+====
+ONTAP Select Deploy管理ユーティリティをダウンロードするには、次のものが必要です。
+
+* NetAppサポートサイトの登録アカウント。アカウントをお持ちでない場合は、を参照してください https://mysupport.netapp.com/site/user/registration["ユーザ登録"^]。
+* 評価用ライセンスがあるONTAP Select環境の場合は、に移動し https://mysupport.netapp.com/site/downloads/evaluation/ontap-select["エンドユーザライセンス契約に同意します。"^]ます。
+
+
+====
 
 
 == ライセンスの特性
