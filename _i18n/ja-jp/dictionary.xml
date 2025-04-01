@@ -297,43 +297,10 @@
   <block id="04de579c1894992d6db449edfae40cea" category="list-text">2.7.2 以前のバージョンを導入します</block>
   <block id="90d8a60c5d8da54341e7fbd934d3024e" category="list-text">ONTAP Select Deploy 2.7.2 およびそれ以前のすべてのリリースには、 REST API のバージョン 2 が含まれています。</block>
   <block id="1e65c8b003833561b006ff8f81c74d0a" category="admonition">REST API のバージョン 2 と 3 には互換性がありません。バージョン 2 の API を含む以前のリリースから Deploy 2.8 以降にアップグレードする場合は、コマンドラインインターフェイスを使用して、 API に直接アクセスする既存のコードおよびスクリプトを更新する必要があります。</block>
-  <block id="c32e557727d87dabd26419e2d74fd541" category="summary">Ansible のロールを使用して、 ONTAP Select の導入を自動化できます。</block>
-  <block id="6a7bceb6d2b5ceedce475be4f9b01f70" category="doc">Ansible で ONTAP Select 環境を自動化</block>
-  <block id="ef4813ca7c0fc0ff31c081f95744fca3" category="paragraph">Ansible のロールとプレイブックを使用して、 ONTAP Select の導入を自動化できます。</block>
-  <block id="53e3f47e6ca445e9be6f8424cc405d08" category="paragraph">Ansible のロールは、標準化されたファイル構造内のタスク、テンプレート、ハンドラ、変数の論理的な集合です。これらのロールを使用して、個別に使用できる機能を促進、再利用、およびモジュール化します。ロールと、そのロールを実行するホストのリストをプレイブックに含めます。Ansible のインストール後、必要なモジュールを更新し、プレイブックを理解したら、 NetApp GitHub から ONTAP Select （ OTS ）ロールをダウンロードして、独自のプレイブックを作成して実行し、 ONTAP Select クラスタを導入することができます。</block>
-  <block id="a5cd3ed116608dac017f14c046ea56bf" category="section-title">役割</block>
-  <block id="826d466edf75a6e091340a11b737b650" category="paragraph">ONTAP Select には次の 2 つのロールがあります。</block>
-  <block id="efd9faa12026d5475636db4e69b74c88" category="section-title">na_ots_deploy</block>
-  <block id="43240aa487d9e87740e23d626da1a362" category="paragraph">このロールは、 ONTAP Select Deploy のインストールファイルを vCenter または ESXi ホストにダウンロードします。次に、 Deploy VM が作成されて実行されます。</block>
-  <block id="295abdb722ec58f88548a860f1de3615" category="paragraph">このロールで使用される入力値は次のとおりです。</block>
-  <block id="ce32e2e59fbccdfecf9783e364821344" category="list-text">vCenter または ESXi ホストのクレデンシャル</block>
-  <block id="bcac6351d7ffa20621625e884ac48eef" category="list-text">次のような情報を含む Deploy VM の作成：</block>
-  <block id="75ba8d70e3692ba200f0e0df37b4d2ae" category="list-text">IPアドレス</block>
   <block id="dae4a538d4ca7b6c0789932062fe718d" category="list-text">ホスト名</block>
-  <block id="99dea78007133396a7b8ed70578ac6ae" category="list-text">ログイン</block>
   <block id="dc647eb65e6711e155375218212b3964" category="list-text">パスワード</block>
   <block id="8a5227cc82d14862956938caffc1acf2" category="list-text">データストア</block>
   <block id="eec89088ee408b80387155272b113256" category="list-text">ネットワーク</block>
-  <block id="53c3b66ec700ff4dc91986d0dd8b16ac" category="list-text">OVA ファイルへのローカルパス</block>
-  <block id="a494e509586e66c9858cd2b0032bbb59" category="paragraph">インストールファイルが利用可能であることを確認してから、ロールを含むプレイブックを実行してください）。</block>
-  <block id="67b626a26e85af31687eb59b04a92d36" category="admonition">これらの入力値を指定する最も簡単な方法は、グローバル変数ファイルを YML 形式で使用することです。この YML ファイルをプレイブックに渡します。</block>
-  <block id="62f436a0c8a1102605e3a87bed8fb9bb" category="paragraph">ロールには、 Deploy OVA ファイルをホストにインポートし、 VM を作成して実行するタスクが 1 つあります。このロールは、NetApp Ansible GitHubから次のURLからアクセスしてダウンロードできます。<block ref="76046f5222ce385c10b6d73a03e82ba7" category="inline-link-macro-rx"></block></block>
-  <block id="844c277ee2d3a4ab83ef1f113352e100" category="section-title">na_ots_ クラスタ</block>
-  <block id="7fd297e1f0beaa7151bd9285d7dff546" category="paragraph">このロールでは、 ONTAP Select Deploy API を使用して ONTAP Select クラスタを作成および導入します。Deploy VM が作成され、手動または * na_ots_deploy * ロールを使用して稼働していることを前提としています。また、 Select ホストに ONTAP Select クラスタに必要なネットワークとストレージが適切に設定されていることを前提としています。</block>
-  <block id="f0257515d53312c2d8028409069c5d84" category="paragraph">ロールは、 vCenter または ESXi のクレデンシャルの入力値と Deploy VM のクレデンシャルを使用して、 API と、 ONTAP Select クラスタとノード VM の作成に必要なすべての関連情報にアクセスします。</block>
-  <block id="ea6e2b68eae559d20093f0d7eae85fb8" category="paragraph">ロールは次のタスクを実行します。</block>
-  <block id="de939cf4d4a045633c8a520b501bb40e" category="list-text">（ vCenter または ESXi ）ホストのクレデンシャルを追加している</block>
-  <block id="0b67a16a8394599f4eecf8683ef0d301" category="list-text">ホスト ID の取得と登録</block>
-  <block id="fa8c1aa26c03157b5e62997fd0fdaa14" category="list-text">内部ネットワークの検証（マルチノードクラスタの場合）</block>
-  <block id="d7494ab1ca8800562b8faee8d3a4984e" category="list-text">クラスタを作成しています</block>
-  <block id="073dd452840b7a9881432728f959cd2c" category="list-text">ノードの設定</block>
-  <block id="5b6e8147fdc6caa0b27d7fc75489608f" category="list-text">ネットワークとストレージプールを構成しています</block>
-  <block id="b6877b94a1e530ab0fc6b8d1545fd166" category="list-text">クラスタを導入する</block>
-  <block id="f8cac4cf1b1201d6a9386323183ca9c8" category="paragraph">その結果、クラスタ VM が稼働し、 ONTAP Select クラスタが完全に導入された状態でロールが完了します。このロールは、NetApp Ansible GitHubから次のURLからアクセスしてダウンロードできます。<block ref="56a4d28e5b01605b6b865a56dead08da" category="inline-link-macro-rx"></block></block>
-  <block id="043194e296799e8dbefda7f37d0e101e" category="section-title">Playbook の例</block>
-  <block id="483b9ffc2547d862835719e69821ce3e" category="paragraph">次に、これらの 2 つの ONTAP Select ロールを呼び出すサンプルのプレイブックを示します。入力変数は YML ファイルで定義され、「 vars_files 」を介して渡されることに注意してください。詳細については、各役割の README ファイルを参照してください。</block>
-  <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link-macro">ここをクリック</block>
-  <block id="006a0a02171a296bf3a320f8991be24a" category="paragraph">上記のロールで ONTAP Select クラスタを作成して実行すると、 ONTAP の機能をさらに自動化するために使用できる豊富な ONTAP Ansible のロールを活用できます。使用可能なONTAPロールにアクセスできます<block ref="4d400bdda09fce7a6e9e1a49c64cce9d" category="inline-link-macro-rx"></block>。要約すると、 ONTAP Select の Ansible のロールと ONTAP のロールを使用して、エンドツーエンドのワークフローを完全に自動化し、 ONTAP Select でストレージを管理できます。</block>
   <block id="e94fcecbba43e9dc52109bded1878e47" category="summary">高可用性オプションを確認して、環境に最も適した HA 構成を選択してください。</block>
   <block id="a2aed8c01fc695836bd76d6f5b7a2ad9" category="doc">ハイアベイラビリティ構成</block>
   <block id="80ca7f43f3e672c21243bfefe6098be3" category="paragraph">お客様はアプリケーションワークロードをエンタープライズクラスのストレージアプライアンスからコモディティハードウェアで動作するソフトウェアベースのソリューションに移行し始めていますが、耐障害性とフォールトトレランスに対するニーズや期待は変わりません。Recovery Point Objective （ RPO ；目標復旧時点）がゼロの HA 解決策 は、インフラスタック内のコンポーネント障害によるデータ損失からお客様を保護します。</block>
@@ -2008,20 +1975,15 @@
   <block id="2bfa0c145c4d2b4004e481451529eb85" category="doc">導入後のクラスタの初期状態</block>
   <block id="4f8adfce07663fda787740d49cd25397" category="paragraph">ONTAP Select クラスタには、作成後にいくつかの特性があります。</block>
   <block id="6c8b8cb454d3ccba7c258b15c1a29605" category="inline-link-macro">OTS Deployクラスタの更新がエラーで失敗する</block>
-  <block id="07c811008e90cffbb0d342cd1beb72b8" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、技術情報の記事を参照して<block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>ください。</block>
   <block id="bfa10f7c5e846fdab9228aa316c04549" category="paragraph-title">LIF</block>
   <block id="e6d9b928e48b5e5a2538b2bcdc515c95" category="paragraph">ユーザが指定する 2 種類の LIF が割り当てられます。</block>
   <block id="7e8ceade9e54e9a912c6f9a52ea87658" category="list-text">クラスタ管理（クラスタごとに 1 つ）</block>
   <block id="5e3a8851b34912653fbf0e9bbf3fc9d0" category="list-text">ノード管理（ノードごとに 1 つ）</block>
   <block id="642223473862db290604321fe2ebe763" category="paragraph-title">SVM</block>
-  <block id="3013e63917da83ac89d317625e960fa3" category="paragraph">2 つの管理 SVM がアクティブです。</block>
-  <block id="38cd25d85c8a7e96abb2aaf9d4009eb2" category="list-text">デフォルトSVM</block>
-  <block id="c6117cdbee2307d85ed57db8a195f4f8" category="list-text">クラスタSVM</block>
   <block id="d5350d8759b1ec84607e47908809058e" category="paragraph-title">アグリゲート</block>
   <block id="ebeedb9721ef0e0966825fecfef52bb5" category="paragraph">ルートアグリゲートが作成されます。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="paragraph-title">特徴</block>
   <block id="d5daa4c0e0a3988a633eb5273b984697" category="paragraph">すべての機能のライセンスが付与され、使用可能です。SnapLock と FabricPool のどちらにも、個別のライセンスが必要です。</block>
-  <block id="076515078e25047da0c60bc6f27e2c68" category="admonition">データ SVM は作成されません。また、マルチノードクラスタの内部ネットワークでは LIF が自動生成されます。</block>
   <block id="d0730ff14b2f6fb53d9e49978a76660e" category="summary">ONTAP Select は、ほとんどのONTAP 機能を完全にサポートしています。ONTAP の機能の多くには、クラスタの導入時に各ノードで自動的にライセンスが付与されます。ただし、一部の機能には個別のライセンスが必要です。</block>
   <block id="f33b49f74fc8933d903baf71e893888b" category="doc">ONTAP の機能</block>
   <block id="0deac5caf37785bb3c3ce0d80f8d8d18" category="admonition">ハードウェア固有の依存関係を持つONTAP 機能は、一般にONTAP Select ではサポートされていません。</block>
@@ -3708,7 +3670,6 @@
   <block id="bd4d64691f933fac8c76e72632b62944" category="sidebar">Python コードサンプル</block>
   <block id="d7d5441f14743f0457740d73bd580cfa" category="sidebar">JSON を使用してクラスタを作成します</block>
   <block id="1ca48c398b8c739a9815d44011185388" category="sidebar">クラスタノードのサイズを変更</block>
-  <block id="46fc1cf655dd8158b6b58910cf88e653" category="sidebar">Ansible で自動化</block>
   <block id="8a9e0f8224695e94f0988f444488877b" category="sidebar">CLI を使用します</block>
   <block id="89c5ba6f9355d2da97bb00bdf0ec66e5" category="sidebar">SSH を使用してサインインします</block>
   <block id="b4196422f4798acbaffd27a9839f9143" category="sidebar">ESXi を 6.5 以降にアップグレードしています</block>
@@ -3731,4 +3692,17 @@
   <block id="bcb0a8f0933f79963f8da791712307a2" category="list-text">評価用ライセンスがあるONTAP Select環境の場合は、に移動し<block ref="b36a96015925128ab0074fda8004c795" category="inline-link-rx"></block>ます。</block>
   <block id="bf55dfa0f53f23704c47337781c41d3d" category="inline-link">NetAppサポートサイトの登録アカウントが必要です</block>
   <block id="914500048ffed1428cdb2b9c357cc238" category="paragraph"><block ref="a25ad1701b82327b9cc6269d54c24597" category="inline-link-rx"></block>です。</block>
+  <block id="e85029c6308bf8469ad5d2bf5ac5a6da" category="doc">ONTAP Selectローカル接続ストレージ用のハードウェアRAIDサービス</block>
+  <block id="72270ae5ad1efa50cbda87b77a2b8c8d" category="inline-link-macro">ONTAP SelectソフトウェアRAID構成で障害が発生したドライブの交換</block>
+  <block id="9e21cea65d2285f38de1d74bb5ebe82c" category="admonition">ハードウェアRAID構成を使用しているONTAP Select VMから仮想ディスクの接続を解除することはできません。ディスクの接続解除は、ソフトウェアRAID構成を使用しているONTAP Select VMでのみサポートされます。詳細については、を参照してください <block ref="2a48fe6fcfd810b54ef07e2d1e2a735b" category="inline-link-macro-rx"></block> 。</block>
+  <block id="dba6192da7444fc9e5fd32119193b12b" category="admonition">ONTAP管理者アカウントのロールと権限を制限すると、ONTAP Select Deployによるクラスタの管理が制限される可能性があります。詳細については、ナレッジベースの記事を参照して <block ref="e376689174188790c996782ceb328c45" category="inline-link-macro-rx"></block>ください。</block>
+  <block id="a97a40851f37ebfbf5db3d3bf28da58b" category="admonition">マルチノードクラスタの内部ネットワークでは、LIFが自動で生成されます。</block>
+  <block id="0f1007666fd5cc7934baffbdef1287d0" category="paragraph">3つのSVMがアクティブです。</block>
+  <block id="070848ec049722b444235c5db132a1bb" category="list-text">管理SVM</block>
+  <block id="9392c5507686114a0bba1e8e0b5be096" category="list-text">ノードSVM</block>
+  <block id="d78477ac5628a6dd2fb8c046564b2227" category="list-text">システム（クラスタ）SVM</block>
+  <block id="93b1520005778e826c33efa7132d61c9" category="inline-link">SVMの作成</block>
+  <block id="e0d52f0658828de62020550252885d55" category="admonition">データSVMは、ONTAP Selectクラスタ環境では作成されません。導入後にクラスタ管理者が作成する必要があります。詳細については、を参照してください<block ref="35df8afad8b7a7c75a74b08ae370be2a" category="inline-link-rx"></block>。</block>
+  <block id="c472d49cae1aabcbf09d7e5fe0e34c87" category="inline-link-macro">クラスタに含まれるSVMのタイプ</block>
+  <block id="2e6bba9624b33764642b52b2cab65274" category="list-text"><block ref="2e6bba9624b33764642b52b2cab65274" category="inline-link-macro-rx"></block></block>
 </blocks>
