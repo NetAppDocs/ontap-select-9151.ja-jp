@@ -3373,19 +3373,12 @@
   <block id="c94bc3200f704807c4c41ce4c2e2b2d8" category="paragraph">アップグレード手順 は、 ONTAP Select クラスタで使用するホストごとに実行する必要があります。</block>
   <block id="e35a91dc5473bf4a53204a2bd1366d7e" category="summary">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。</block>
   <block id="c5f80e69da9019e045ae59cca1c9ae22" category="doc">クラスタを拡張または縮小する</block>
-  <block id="d6746c8c49fd9df73bbb168197689da8" category="paragraph">ONTAP Select 9.15.1以降では、既存のクラスタのサイズを6ノードから8ノードに拡張し、クラスタサイズを8ノードから6ノードに縮小できます。他のクラスタの拡張や縮小のシナリオはサポートされません。</block>
-  <block id="f6ad6d358dd65a1da361069309b57e39" category="paragraph">手順は、ONTAP Select DeployからCLI、API、またはWebインターフェイスを使用して開始します。</block>
   <block id="412c286ae37ff7a40b56dd84c3bf196c" category="section-title">ハードウェアとストレージの要件</block>
   <block id="c9dd95ac8795512f2d676118ba8def1a" category="paragraph">クラスタの拡張と縮小の機能には、次のような制限があります。</block>
-  <block id="03a645906298706d76817495f4d8708a" category="list-text">サポートされるのは、ESXハイパーバイザーホスト上に作成されたクラスタに限られます。ONTAP Select 9.15.1と互換性があるESXのバージョンは次のとおりです。</block>
   <block id="ef179550c4eb9da6a82350b32d807ed9" category="list-text">ESXi 7.0</block>
-  <block id="2b2045e987020e440e1d72497530fdf6" category="list-text">6ノードクラスタから8ノードクラスタへの拡張のみ可能です。</block>
-  <block id="39503511d67e0af8ddd6049c24f164f7" category="list-text">8ノードクラスタから6ノードクラスタにのみ収縮できます。</block>
   <block id="c0fa4ded01a6d24b2a77cd3a6b10e6e7" category="section-title">クラスタを拡張</block>
   <block id="c117993f1e48f58c366f6fe0873d958b" category="paragraph">クラスタ拡張機能を使用して、既存のクラスタのサイズを6ノードから8ノードのクラスタに拡張できます。</block>
   <block id="679ac2592315c6e7c7320336fcda4a9c" category="paragraph">クラスタの拡張手順に備えて、新しいESXホストがインベントリに追加され、新しいノードの詳細が割り当てられます。クラスタの拡張プロセスを開始する前に、選択した内部ネットワークがネットワークの事前確認で検証されます。</block>
-  <block id="7c96df80e019ac7201d76d07cb2c8c3b" category="inline-link-macro">ネットワーク接続チェッカー</block>
-  <block id="4ae4de42a8fcf95f1eb770acae4690f2" category="list-text">マルチノードクラスタを導入する場合は、を理解しておく必要があります<block ref="db3262d1c88b720b4d17a260091e6a75" category="inline-link-macro-rx"></block>。</block>
   <block id="30230ebf7e780c11cfcde8274fc17934" category="list-text">新しいノードのライセンスの詳細を確認します。</block>
   <block id="70be200347cc17e3939c72792fe71b15" category="list-text">ページ上部の*[クラスタ]*タブを選択し、リストから目的のクラスタを選択します。</block>
   <block id="83d473b2e8f1c324b60e13d720cac51a" category="list-text">クラスタの詳細ページで、ページの右側にある歯車アイコンを選択し、*[クラスタの拡張]*を選択します。</block>
@@ -3680,7 +3673,6 @@
   <block id="afc9d68a1be701598b5ef94dc0be2844" category="sidebar">2 ノードクラスタの Deploy をリカバリします</block>
   <block id="b374e4bbc5d3bd65f35605cc784ed685" category="list-text">ONTAP Select 9.14.1では、VMware ESXi 8.0 U2がサポートされています。</block>
   <block id="5add73dc063e8420f47ce30e8a544f34" category="list-text">VMware ESXi 8.0 U3（ONTAP 9 .15.1P4以降のパッチリリースで使用可能）</block>
-  <block id="03c073298ba0e42c4beebe1f4a065d90" category="list-text">ESXi 8.0 U3（ONTAP 9 .15.1P4以降のパッチリリースで使用可能）</block>
   <block id="3a13e6fcb6840db51e3e181c41dff37b" category="list-text">ESXi 8.0 U2</block>
   <block id="084ef93eebe5fd52d657e556b4305619" category="list-text">ESXi 8.0 U1</block>
   <block id="4ec8056f2f2bfb0ffa0104fc43edb1da" category="list-text">ESXi 8.0GA</block>
@@ -3705,4 +3697,17 @@
   <block id="e0d52f0658828de62020550252885d55" category="admonition">データSVMは、ONTAP Selectクラスタ環境では作成されません。導入後にクラスタ管理者が作成する必要があります。詳細については、を参照してください<block ref="35df8afad8b7a7c75a74b08ae370be2a" category="inline-link-rx"></block>。</block>
   <block id="c472d49cae1aabcbf09d7e5fe0e34c87" category="inline-link-macro">クラスタに含まれるSVMのタイプ</block>
   <block id="2e6bba9624b33764642b52b2cab65274" category="list-text"><block ref="2e6bba9624b33764642b52b2cab65274" category="inline-link-macro-rx"></block></block>
+  <block id="82f452184fa717ab2fcdbde25eea3a2b" category="inline-link-macro">実稼働環境への導入に関するライセンスについて学ぶ</block>
+  <block id="74d4caeb059278dbd1c813ff422126a8" category="list-text"><block ref="74d4caeb059278dbd1c813ff422126a8" category="inline-link-macro-rx"></block></block>
+  <block id="3e7c1c2f4ff8e34c82dbce131bf96f39" category="paragraph">次のクラスターの拡張と縮小はサポートされていません。</block>
+  <block id="399ac94f70d77c6189cd7c4808326bdd" category="list-text">1 ノード、2 ノード、または 4 ノードのクラスターから 6 ノードまたは 8 ノードのクラスターへの拡張。</block>
+  <block id="226d8636aca6bd1bdcac58203b8ddcd2" category="list-text">6 ノードまたは 8 ノードのクラスターから 1 ノード、2 ノード、または 4 ノードのクラスターへの縮小。</block>
+  <block id="91af5705f16502125e8b2187e64202c0" category="inline-link-macro">CLI</block>
+  <block id="deb20e04b6a7cd797c67d023a7919cc9" category="inline-link-macro">ウェブUI</block>
+  <block id="a1f41e52e9ddbd9f87ecd032c237b1c0" category="inline-link-macro">SnapMirrorレプリケーション</block>
+  <block id="479ae5866a20368120075c3c81487a72" category="paragraph">クラスター内のノードの数を、クラスターの拡張または縮小でサポートされないサイズに変更するには、次のタスクを実行する必要があります。新しいマルチノードクラスタを展開するには、 <block ref="e244d19d71425b6ce1016edcf4f160e2" category="inline-link-macro-rx"></block>または<block ref="e7b95b44ed2cf30f5122b04d3c4d28be" category="inline-link-macro-rx"></block> ONTAP Select Deploy 管理ユーティリティに付属しています。 。該当する場合は、次の方法でデータを新しいクラスタに移行します。 <block ref="968561cde231c01bbf82ff0390d26f84" category="inline-link-macro-rx"></block> 。</block>
+  <block id="c630ce0380a19f100f797f38c49d39bd" category="paragraph">クラスタの拡張および縮小手順は、CLI、API、または Web インターフェイスを使用して、 ONTAP Select Deploy から開始します。</block>
+  <block id="e6bf3ba5fe1006a55faeef44787ee469" category="list-text">サポートは、ESXハイパーバイザーホスト上に作成されたクラスタに限定されます。以下のESXバージョンは、 ONTAP Select 9.15.1以降と互換性があります。</block>
+  <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
+  <block id="6f32bc87686311f97a78df38edf22268" category="list-text">マルチノードクラスタを展開する場合は、ネットワーク接続チェッカーの使い方をよく理解しておく必要があります。ネットワーク接続チェッカーは、 <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block>または<block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> 。</block>
 </blocks>
