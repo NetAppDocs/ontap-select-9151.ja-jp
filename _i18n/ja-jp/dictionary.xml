@@ -1911,7 +1911,6 @@
   <block id="b622687ba14734f3e63b4781b7e16324" category="paragraph-title">4 ノード、 6 ノード、または 8 ノードのクラスタと 2 ノードの ONTAP Select クラスタの違いは何ですか。</block>
   <block id="81cd6c8ef1512058861a9e8233376fb2" category="paragraph">ONTAP Select Deploy VMが主にクラスタの作成に使用される4ノード、6ノード、および8ノードクラスタとは異なり、2ノードクラスタは、HAクォーラム用にONTAP Select Deploy VMを継続的に利用します。ONTAP Select Deploy VMが使用できない場合、フェイルオーバーサービスは無効になります。</block>
   <block id="22d02cab0c9108f9f86736e68a4be2de" category="paragraph-title">MetroCluster SDS とは</block>
-  <block id="a6bd8e6869506e1e1f9d1c161d200e90" category="paragraph">MetroCluster SDS は、ネットアップの MetroCluster ビジネス継続性ソリューションのカテゴリに分類される、低コストの同期レプリケーションオプションです。FAS ハイブリッドフラッシュ、 AFF 、クラウド向け NetApp Private Storage 、および NetApp FlexArray ® テクノロジで利用できる NetApp MetroCluster とは異なり、 ONTAP Select でのみ利用できます。</block>
   <block id="5c13f1d93ecc5cc8fc37b87a8fedb3b7" category="paragraph-title">MetroCluster SDS と NetApp MetroCluster の違いは何ですか。</block>
   <block id="f782a001664af23a9a479ac7f8af14db" category="paragraph">MetroCluster SDS は、同期レプリケーション解決策 を提供し、ネットアップの MetroCluster ソリューションに該当します。ただし、主な違いは、サポートされる距離（約 10km と 300km ）と接続タイプ（ FC と IP ではなく IP ネットワークのみがサポート）です。</block>
   <block id="1092371194caad84c750464b682a97f5" category="paragraph-title">2 ノード ONTAP Select クラスタと 2 ノード ONTAP MetroCluster SDS の違いは何ですか。</block>
@@ -3710,4 +3709,5 @@
   <block id="e6bf3ba5fe1006a55faeef44787ee469" category="list-text">サポートは、ESXハイパーバイザーホスト上に作成されたクラスタに限定されます。以下のESXバージョンは、 ONTAP Select 9.15.1以降と互換性があります。</block>
   <block id="37730150d6378b2a0b04f20595d2d65a" category="list-text">ESXi 8.0 U3</block>
   <block id="6f32bc87686311f97a78df38edf22268" category="list-text">マルチノードクラスタを展開する場合は、ネットワーク接続チェッカーの使い方をよく理解しておく必要があります。ネットワーク接続チェッカーは、 <block ref="8b785c8234405c591fd2ca6b43d87925" category="inline-link-macro-rx"></block>または<block ref="d445e69ec86af9bb8b6f10e8a87603f1" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d099d0357fc4b6bd5f674bf948ccd8ef" category="paragraph">MetroCluster SDSは、 NetAppのMetroClusterビジネス継続性ソリューションのカテゴリーに属する、低コストの同期レプリケーションオプションです。FASハイブリッドFAS、 AFF、 NetAppプライベートストレージ for Cloudで利用可能なNetApp MetroClusterとは異なり、 ONTAP Selectでのみ利用可能です。</block>
 </blocks>
