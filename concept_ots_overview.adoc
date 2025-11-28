@@ -97,6 +97,7 @@ ONTAP Select クラスタ内の各ノードには、 ONTAP のいくつかの機
 * サービスプロセッサ
 * SVMの移行
 * SnapLock Compliance
+* SnapMirrorアクティブ同期
 * VMware HCX
 
 
