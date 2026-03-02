@@ -439,7 +439,6 @@
   <block id="8ddd4ae6565aad8e0220721a3b0b115f" category="paragraph">License Manager の各インスタンス、つまり、対応する Deploy ユーティリティのインスタンスは、一意の 128 ビット番号で識別されます。この番号は、プールを特定の License Manager インスタンス（実質的には Deploy インスタンス）にロックするために、 9 桁の容量プールライセンスシリアル番号と結合されます。NetApp Support Siteで NetApp License File （ NLF ）の生成の一環として両方の値を指定する必要があります。</block>
   <block id="c35b911ba82c4e39b4517e38d1a88551" category="paragraph">次の方法で Web ユーザインターフェイスを使用して、 Deploy インスタンスのライセンスロック ID を確認できます。</block>
   <block id="93147ad40002fa287e2077d09284c452" category="list-text">[ はじめに ] ページこのページは、 Deploy に初めてサインインすると表示されます。ページの右上にあるドロップダウンボックスをクリックして、 [ はじめに ] を選択して、ページを表示することもできます。LLID は [ ライセンスの追加 ] セクションに表示されます。</block>
-  <block id="f51e8d01c52b31dc2ac35fcbc93eca28" category="list-text">管理ページ上部の * 管理 * タブをクリックし、 * システム * および * 設定 * をクリックします。</block>
   <block id="bc165811908b5de0b53e3fb455b59f7d" category="section-title">基本的なリース操作</block>
   <block id="e02846e806da1a115348e9fee40e2ff8" category="paragraph">ONTAP Select ノードは、データアグリゲートが作成、拡張、または変更されるたびに、有効な容量リースを特定または要求する必要があります。以前の要求から取得したリースがまだ有効である場合は、リースを使用するか、必要に応じて新しいリースを要求できます。ONTAP Select ノードで容量プールのリースを検索するには、次の手順を実行します。</block>
   <block id="7d9520f0fa2db8b35655f9495b62e220" category="list-text">既存のリースがノードに存在する場合は、次の条件をすべて満たしていれば使用されます。</block>
@@ -3711,4 +3710,5 @@
   <block id="25775c61c3281e6d412f48371102d8b3" category="section-title">Deploy Web インターフェイスに Sign in します</block>
   <block id="887ee30caedf2bee91979565f5ddf01e" category="paragraph">Deploy ユーティリティが使用可能であることを確認して初期構成を実行するには、Web ユーザー インターフェイスに Sign in する必要があります。</block>
   <block id="ccbbd15600c60abef8f9d734d84b4a4e" category="paragraph"><block ref="ccbbd15600c60abef8f9d734d84b4a4e" category="inline-link-macro-rx"></block></block>
+  <block id="f3e8670f212f7476d09305c9b4820b8c" category="list-text">管理 ページ上部の*管理*タブをクリックし、*システムとAutoSupport*をクリックします。</block>
 </blocks>
