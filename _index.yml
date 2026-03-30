@@ -1,5 +1,12 @@
 ---
 indexpage:
+  title: ONTAP Select 9.15.1
+  summary: NetApp ONTAP Selectは、VMware ESXiまたはKernel-Based Virtual Machine（KVM）ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入できるSoftware-Defined
+    Storageアプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。このサイトには、ONTAP Select
+    9.15.1のドキュメントが含まれています。
+  keywords: ontap select, 9151, concept, reference, task, documentation, release notes,
+    install, deploy, upgrading, workflow, migrate, security, admin, operation, compare,
+    production, platforms
   lead: NetApp ONTAP Selectは、VMware ESXiまたはKernel-Based Virtual Machine（KVM）ハイパーバイザーを実行するさまざまなコモディティハードウェアサーバに導入できるSoftware-Defined
     Storageアプライアンスです。柔軟性と拡張性に優れたプライベートクラウドインフラの構築に必要な即応性を提供します。このサイトには、ONTAP Select
     9.15.1のドキュメントが含まれています。
