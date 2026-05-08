@@ -3710,4 +3710,5 @@
   <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">PremiumまたはPremium XLライセンス</block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDSは、2ノードONTAP Selectクラスタを作成する際の構成オプションです。これは、リモートオフィス／ブランチオフィス（ROBO）の導入に似ています。この強化された2ノード構成により、さらに多くのユースケースシナリオが利用可能になります。MetroCluster SDSを導入する準備の一環として、要件と制限事項を認識しておく必要があります。</block>
   <block id="c661d298cd420b7b6d7d3a82d9089108" category="admonition">VMFSのオーバーヘッドはゼロではなく（VMware KB 1001618を参照）、データストアによって空き領域として報告された領域全体を使用しようとすると、クラスタ作成操作中に誤ったエラーが発生することがあります。</block>
+  <block id="7436b418bed093768e360d32105591d2" category="sidebar">ONTAP Selectのドキュメント</block>
 </blocks>
